@@ -8,9 +8,9 @@ if (bootsector.length > 512) {
 var diskinfo = prompt("Please paste the contents of \"OS\"", " ");
 console.debug(diskinfo);
 for (i = 0; i <= bootsector.length; i++) {
-  diskWrite(0, i, bootsector[i]);
+  diskWrite(i, bootsector[i]);
 }
 for (i = 0; i <= diskinfo.length; i++) {
-  diskWrite(0, i, diskinfo[i]);
+  diskWrite(i, diskinfo[i]);
 }
 alert("Complete!");

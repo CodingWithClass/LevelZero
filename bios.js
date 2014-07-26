@@ -18,18 +18,16 @@ function writeString(string) {
 
 writeString("LevelZero BIOS version 1\n");
 writeString("Disk size: ");
-writeString(localStorage.length/1000 + "KiB\n");
+writeString(localStorage.getItem("storageSize")/1024 + "KiB\n");
 writeString("Booting from boot sector of disk...\n");
 // Boot sector 512 bytes long
 var bootSect = new String();
 for (i=0;i<=511;i++) {
-  var input = diskRead(0, i);
+  var input = diskRead(i);
   if (input == "\0") {
     break;
   } else {
     bootSect = bootSect + input;
   }
 }
-(function() {
-  eval(bootSect);
-})();
+setTimeout(function(){eval(bootSect);},2000);

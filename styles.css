@@ -22,13 +22,12 @@ div#info {
   top: 300px;
   left: 0px;
   background-color: white;
-  width: 550px;
-  height: 100px;
+  width: 450px;
+  height: 200px;
   font-family: monospace;
-  border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-radius: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
